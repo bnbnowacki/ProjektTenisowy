@@ -76,7 +76,7 @@
         android:layout_width="280dp"
         android:layout_height="40dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Wybierz liczbę setów"
+        android:text="Kto serwuje?"
         android:layout_below="@id/textViewInfo"
         android:layout_centerHorizontal="true"
         android:id="@+id/textViewSety"/>
@@ -89,15 +89,15 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1"/>
+            android:text="Zawodnik 1"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2+SuperTiebreak"/>
+            android:text="Zawodnik 2"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="3"/>
+            android:text="losuj"/>
     </RadioGroup>
 
     <Button

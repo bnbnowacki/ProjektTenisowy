@@ -1,5 +1,6 @@
 package com.example.nowacki.projekttenisowy;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -60,6 +61,11 @@ public class MainActivity extends ActionBarActivity {
         textPunkt1.setText(Dane.textPointLeft);
         textPunkt2.setText(Dane.textPointRight);
         textGemy.setText(Dane.textGemy);
+        Dane.ktoryGracz=1;
+        if(Dane.tryb==true){
+            Intent intent=new Intent(MainActivity.this, AddPointActivity.class);
+            startActivity(intent);
+        }
     }
 
     public void ClickRight(View view) {
@@ -67,5 +73,15 @@ public class MainActivity extends ActionBarActivity {
         textPunkt1.setText(Dane.textPointLeft);
         textPunkt2.setText(Dane.textPointRight);
         textGemy.setText(Dane.textGemy);
+        Dane.ktoryGracz=2;
+        if(Dane.tryb==true){
+            Intent intent=new Intent(MainActivity.this, AddPointActivity.class);
+            startActivity(intent);
+        }
+    }
+
+    public void ClickButtonStatystyki(View view) {
+        Intent intent=new Intent(MainActivity.this, StatisticsViewActivity.class);
+        startActivity(intent);
     }
 }

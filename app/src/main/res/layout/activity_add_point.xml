@@ -57,15 +57,27 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Winner"/>
+            android:text="As serwisowy"
+            android:id="@+id/as"
+            android:onClick="ClickTypPunktu"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Niewymuszony błąd"/>
+            android:text="Winner"
+            android:id="@+id/winner"
+            android:onClick="ClickTypPunktu"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Podwójny błąd serwisowy"/>
+            android:text="Niewymuszony błąd"
+            android:id="@+id/blad"
+            android:onClick="ClickTypPunktu"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Podwójny błąd serwisowy"
+            android:id="@+id/podwojny"
+            android:onClick="ClickTypPunktu"/>
     </RadioGroup>
 
     <Button

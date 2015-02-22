@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.RadioButton;
 
 
 public class StartActivity extends ActionBarActivity {
@@ -47,5 +48,23 @@ public class StartActivity extends ActionBarActivity {
         Dane.nazwa2 = ed2.getText().toString();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+    }
+
+    public void ClickButtonTryb(View view) {
+        boolean sprawdz =((RadioButton)view).isChecked();
+        switch (view.getId()){
+            case R.id.prosty:
+                if(sprawdz){
+                    Dane.tryb=false;
+                }
+            break;
+
+            case R.id.zaawansowany:
+                if(sprawdz){
+                    Dane.tryb=true;
+                }
+            break;
+
+        }
     }
 }

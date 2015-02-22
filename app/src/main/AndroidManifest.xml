@@ -24,6 +24,10 @@
             android:name=".AddPointActivity"
             android:label="@string/title_activity_add_point" >
         </activity>
+        <activity
+            android:name=".StatisticsViewActivity"
+            android:label="@string/title_activity_statistics_view" >
+        </activity>
     </application>
 
 </manifest>

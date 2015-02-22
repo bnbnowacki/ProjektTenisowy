@@ -1,9 +1,12 @@
 package com.example.nowacki.projekttenisowy;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.RadioButton;
 
 
 public class AddPointActivity extends ActionBarActivity {
@@ -35,5 +38,88 @@ public class AddPointActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void ClickButtonSerwis(View view) {
+        boolean sprawdz =((RadioButton)view).isChecked();
+        switch (view.getId()){
+            case R.id.pierwszy:
+                if(sprawdz){
+                    Dane.buforSerw1=1;
+                    Dane.buforSerw2=0;
+                }
+                break;
+
+            case R.id.drugi:
+                if(sprawdz){
+                    Dane.buforSerw1=0;
+                    Dane.buforSerw2=1;
+                }
+                break;
+        }
+    }
+
+    public void ClickTypPunktu(View view) {
+        boolean sprawdz =((RadioButton)view).isChecked();
+        switch (view.getId()){
+            case R.id.winner:
+                if(sprawdz){
+                    Dane.buforWin=1;
+                    Dane.buforBlad=0;
+                    Dane.buforPodwojny=0;
+                    Dane.buforAs=0;
+                }
+                break;
+
+            case R.id.blad:
+                if(sprawdz){
+                    Dane.buforWin=0;
+                    Dane.buforBlad=1;
+                    Dane.buforPodwojny=0;
+                    Dane.buforAs=0;
+                }
+                break;
+
+            case R.id.podwojny:
+                if(sprawdz){
+                    Dane.buforWin=0;
+                    Dane.buforBlad=0;
+                    Dane.buforPodwojny=1;
+                    Dane.buforAs=0;
+                }
+                break;
+
+            case R.id.as:
+                if(sprawdz){
+                    Dane.buforAs=1;
+                    Dane.buforWin=0;
+                    Dane.buforBlad=0;
+                    Dane.buforPodwojny=0;
+                }
+                break;
+        }
+    }
+
+    public void ClickZatwierdz(View view) {
+        if(Dane.ktoryGracz==1){
+            Dane.serw11=Dane.serw11 + Dane.buforSerw1;
+            Dane.serw21=Dane.serw21 + Dane.buforSerw2;
+
+            Dane.winner1=Dane.winner1 + Dane.buforWin;
+            Dane.blad1=Dane.blad1 + Dane.buforBlad;
+            Dane.podwojny1=Dane.podwojny1 + Dane.buforPodwojny;
+            Dane.asy1=Dane.asy1 + Dane.buforAs;
+        }
+
+        if(Dane.ktoryGracz==2){
+            Dane.serw12=Dane.serw12 + Dane.buforSerw1;
+            Dane.serw22=Dane.serw22 + Dane.buforSerw2;
+
+            Dane.winner2=Dane.winner2 + Dane.buforWin;
+            Dane.blad2=Dane.blad2 + Dane.buforBlad;
+            Dane.podwojny2=Dane.podwojny2 + Dane.buforPodwojny;
+            Dane.asy2=Dane.asy2 + Dane.buforPodwojny;
+        }
+        finish();
     }
 }

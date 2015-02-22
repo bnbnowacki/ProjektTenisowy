@@ -5,6 +5,7 @@ package com.example.nowacki.projekttenisowy;
  */
 public class Operacja {
     void DodajPunktPrawy(){
+        Dane.punkty2++;
         if(Dane.tieBreak==false) {
             if (Dane.aktualna1 == 3 && Dane.aktualna2 == 3 && Dane.przewaga1 == 0 && Dane.przewaga2 == 0) {
                 Dane.przewaga2 = 1;
@@ -51,6 +52,7 @@ public class Operacja {
     }
 
     void DodajPunktLewy(){
+        Dane.punkty1++;
         if(Dane.tieBreak==false) {
             if (Dane.aktualna1 == 3 && Dane.aktualna2 == 3 && Dane.przewaga1 == 0 && Dane.przewaga2 == 0) {
                 Dane.przewaga1 = 1;

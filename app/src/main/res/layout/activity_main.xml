@@ -64,7 +64,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/buttonStatystyki"
         android:text="Sprawdź statystyki"
-        android:layout_below="@id/textViewSety"/>
+        android:layout_below="@id/textViewSety"
+        android:onClick="ClickButtonStatystyki"/>
 
     <Button
         android:layout_width="wrap_content"

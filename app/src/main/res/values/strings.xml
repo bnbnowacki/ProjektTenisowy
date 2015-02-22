@@ -7,5 +7,6 @@
     <string name="TrybyInfo">Uwaga: Tryb zaawansowany wymaga więcej uwagi podczas meczu oraz więcej sędziowania. Zawiera także informacje odnośnie serwisów, odbiorów, asów itp.</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_add_point">AddPointActivity</string>
+    <string name="title_activity_statistics_view">StatisticsViewActivity</string>
 
 </resources>
