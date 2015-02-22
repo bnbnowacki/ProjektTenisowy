@@ -1,0 +1,167 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.nowacki.projekttenisowy.StatisticsViewActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Statystyki"
+        android:id="@+id/textStatystyki"
+        android:textSize="50sp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="gracz1"
+        android:id="@+id/textGracz1"
+        android:layout_below="@id/textStatystyki"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IMIĘ GRACZA"
+        android:layout_below="@id/textStatystyki"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="gracz2"
+        android:id="@+id/textGracz2"
+        android:layout_below="@id/textStatystyki"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="0"
+        android:id="@+id/textPunkty1"
+        android:layout_below="@id/textGracz1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LICZBA PUNKTÓW"
+        android:layout_below="@id/textGracz1"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/textPunkty2"
+        android:layout_below="@id/textGracz1"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="0%(0/0)"
+        android:id="@+id/textSerwis1"
+        android:layout_below="@id/textPunkty1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PIERWSZY SERWIS"
+        android:layout_below="@id/textPunkty1"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0%(0/0)"
+        android:id="@+id/textSerwis2"
+        android:layout_below="@id/textPunkty1"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="0"
+        android:id="@+id/textAsy1"
+        android:layout_below="@id/textSerwis1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LICZBA ASÓW"
+        android:layout_below="@id/textSerwis1"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/textAsy2"
+        android:layout_below="@id/textSerwis1"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="0"
+        android:id="@+id/textPodwojne1"
+        android:layout_below="@id/textAsy1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PODWÓJNE BŁĘDY"
+        android:layout_below="@id/textAsy1"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/textPodwojne2"
+        android:layout_below="@id/textAsy1"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="0"
+        android:id="@+id/textWinners1"
+        android:layout_below="@id/textPodwojne1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WINNERY"
+        android:layout_below="@id/textPodwojne1"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/textWinners2"
+        android:layout_below="@id/textPodwojne1"
+        android:layout_alignParentRight="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:text="0"
+        android:id="@+id/textNiewymuszone1"
+        android:layout_below="@id/textWinners1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NIEWYMUSZONE BŁĘDY"
+        android:layout_below="@id/textWinners1"
+        android:layout_centerHorizontal="true"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:id="@+id/textNiewymuszone2"
+        android:layout_below="@id/textWinners1"
+        android:layout_alignParentRight="true"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Powrót"
+        android:id="@+id/buttonPowrot"
+        android:layout_below="@id/textNiewymuszone1"
+        android:onClick="ClickButtonPowrot"/>
+
+
+</RelativeLayout>
