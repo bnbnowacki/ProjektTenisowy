@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".StartActivity">
+
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Wybierz imię zawodników"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:text="Zawodnik 1:"
+        android:textSize="20sp"
+        android:id="@+id/textView2"
+        android:layout_below="@id/textView"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:textSize="15sp"
+        android:id="@+id/editText1"
+        android:layout_toRightOf="@id/textView2"
+        android:layout_alignBottom="@id/textView2"/>
+
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="30dp"
+        android:text="Zawodnik 2:"
+        android:textSize="20sp"
+        android:id="@+id/textView3"
+        android:layout_below="@id/textView2"/>
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:textSize="15sp"
+        android:id="@+id/editText2"
+        android:layout_toRightOf="@id/textView3"
+        android:layout_alignBottom="@id/textView3"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView3"
+        android:id="@+id/radioGroup">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tryb Prosty"
+            android:id="@+id/prosty"
+            android:onClick="ClickButtonTryb"
+            />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tryb Zaawansowany"
+            android:id="@+id/zaawansowany"
+            android:onClick="ClickButtonTryb"/>
+    </RadioGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroup"
+        android:text="@string/TrybyInfo"
+        android:id="@+id/textViewInfo"/>
+
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="40dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Wybierz liczbę setów"
+        android:layout_below="@id/textViewInfo"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textViewSety"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewSety"
+        android:id="@+id/radioGroup2">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2+SuperTiebreak"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"/>
+    </RadioGroup>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/radioGroup2"
+        android:text="Rozpocznij mecz!"
+        android:textSize="35sp"
+        android:onClick="ClickStart"/>
+
+</RelativeLayout>
