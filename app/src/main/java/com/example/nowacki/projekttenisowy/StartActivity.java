@@ -1,5 +1,6 @@
 package com.example.nowacki.projekttenisowy;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -8,9 +9,13 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
+
+import java.util.Random;
 
 
 public class StartActivity extends ActionBarActivity {
+    boolean czyLosowac=false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +51,7 @@ public class StartActivity extends ActionBarActivity {
         EditText ed2 = (EditText)findViewById(R.id.editText2);
         Dane.nazwa1 = ed1.getText().toString();
         Dane.nazwa2 = ed2.getText().toString();
+        LosujSerwis();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
@@ -65,6 +71,45 @@ public class StartActivity extends ActionBarActivity {
                 }
             break;
 
+        }
+    }
+
+    public void ClickButtonSerwis(View view) {
+        boolean zaznaczony = ((RadioButton)view).isChecked();
+        switch (view.getId()){
+            case R.id.zaw1:
+                if(zaznaczony)Dane.serwis=1;
+                break;
+            case R.id.zaw2:
+                if(zaznaczony)Dane.serwis=2;
+                break;
+            case R.id.losujSerwis:
+                if(zaznaczony){
+                    czyLosowac=true;
+                }else czyLosowac=false;
+        }
+    }
+
+    private void LosujSerwis(){
+        if(czyLosowac==true) {
+            String komunikat="";
+            Context context = getApplicationContext();
+            int a;
+            Random random = new Random();
+            do {
+                a = random.nextInt(3);
+            } while (a == 0);
+            switch(a){
+                case 1:
+                    komunikat=Dane.nazwa1;
+                    break;
+                case 2:
+                    komunikat=Dane.nazwa2;
+                    break;
+            }
+            Toast drugiKomunikat = Toast.makeText(context, "Serwuje "+komunikat, Toast.LENGTH_SHORT);
+            Dane.serwis = a;
+            drugiKomunikat.show();
         }
     }
 }

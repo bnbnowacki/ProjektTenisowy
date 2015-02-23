@@ -15,6 +15,7 @@ public class MainActivity extends ActionBarActivity {
     TextView textGracz2;
     TextView textPunkt1;
     TextView textPunkt2;
+    TextView serw1, serw2;
     Operacja operacja;
 
     @Override
@@ -29,8 +30,10 @@ public class MainActivity extends ActionBarActivity {
         textPunkt2=(TextView)findViewById(R.id.pointRight);
         textGemy=(TextView)findViewById(R.id.textViewGemy);
         textSety=(TextView)findViewById(R.id.textViewSety);
-        textSety.setText(Dane.textSety);
+        serw1=(TextView)findViewById(R.id.textSerwis1);
+        serw2=(TextView)findViewById(R.id.textSerwis2);
         operacja = new Operacja();
+        SprawdzSerwis();
     }
 
 
@@ -60,28 +63,64 @@ public class MainActivity extends ActionBarActivity {
         operacja.DodajPunktLewy();
         textPunkt1.setText(Dane.textPointLeft);
         textPunkt2.setText(Dane.textPointRight);
-        textGemy.setText(Dane.textGemy);
+        Dane.tGemy="Gemy: "+Dane.textGemy;
+        Dane.tSety="Sety: "+Dane.textSety;
+        textGemy.setText(Dane.tGemy);
+        textSety.setText(Dane.tSety);
         Dane.ktoryGracz=1;
         if(Dane.tryb==true){
-            Intent intent=new Intent(MainActivity.this, AddPointActivity.class);
-            startActivity(intent);
+            switch(Dane.serwis){
+                case 2:
+                    Intent intent=new Intent(MainActivity.this, AddPointActivity.class);
+                    startActivity(intent);
+                    break;
+                case 1:
+                    Intent intent2=new Intent(MainActivity.this, AddPointServiceActivity.class);
+                    startActivity(intent2);
+            }
         }
+        SprawdzSerwis();
     }
 
     public void ClickRight(View view) {
         operacja.DodajPunktPrawy();
         textPunkt1.setText(Dane.textPointLeft);
         textPunkt2.setText(Dane.textPointRight);
-        textGemy.setText(Dane.textGemy);
+        Dane.tGemy="Gemy: "+Dane.textGemy;
+        Dane.tSety="Sety: "+Dane.textSety;
+        textGemy.setText(Dane.tGemy);
+        textSety.setText(Dane.tSety);
         Dane.ktoryGracz=2;
         if(Dane.tryb==true){
-            Intent intent=new Intent(MainActivity.this, AddPointActivity.class);
-            startActivity(intent);
+            switch(Dane.serwis){
+                case 1:
+                    Intent intent=new Intent(MainActivity.this, AddPointActivity.class);
+                    startActivity(intent);
+                    break;
+                case 2:
+                    Intent intent2=new Intent(MainActivity.this, AddPointServiceActivity.class);
+                    startActivity(intent2);
+            }
         }
+        SprawdzSerwis();
     }
 
     public void ClickButtonStatystyki(View view) {
         Intent intent=new Intent(MainActivity.this, StatisticsViewActivity.class);
         startActivity(intent);
+    }
+
+    private void SprawdzSerwis(){
+        switch(Dane.serwis){
+            case 1:
+                serw1.setEnabled(true);
+                serw2.setEnabled(false);
+                break;
+
+            case 2:
+                serw1.setEnabled(false);
+                serw2.setEnabled(true);
+                break;
+        }
     }
 }

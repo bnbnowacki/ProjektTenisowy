@@ -89,15 +89,21 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Zawodnik 1"/>
+            android:text="Zawodnik 1"
+            android:id="@+id/zaw1"
+            android:onClick="ClickButtonSerwis"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Zawodnik 2"/>
+            android:text="Zawodnik 2"
+            android:id="@+id/zaw2"
+            android:onClick="ClickButtonSerwis"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="losuj"/>
+            android:text="losuj"
+            android:id="@+id/losujSerwis"
+            android:onClick="ClickButtonSerwis"/>
     </RadioGroup>
 
     <Button

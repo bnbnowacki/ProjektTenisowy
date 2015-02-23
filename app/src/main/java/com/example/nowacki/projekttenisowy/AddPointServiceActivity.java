@@ -1,6 +1,5 @@
 package com.example.nowacki.projekttenisowy;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,12 +8,12 @@ import android.view.View;
 import android.widget.RadioButton;
 
 
-public class AddPointActivity extends ActionBarActivity {
+public class AddPointServiceActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_add_point);
+        setContentView(R.layout.activity_add_point_service);
     }
 
 
@@ -39,7 +38,6 @@ public class AddPointActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
     public void ClickButtonSerwis(View view) {
         boolean sprawdz =((RadioButton)view).isChecked();
         switch (view.getId()){
@@ -67,6 +65,7 @@ public class AddPointActivity extends ActionBarActivity {
                     Dane.buforWin=1;
                     Dane.buforBlad=0;
                     Dane.buforPodwojny=0;
+                    Dane.buforAs=0;
                 }
                 break;
 
@@ -75,37 +74,38 @@ public class AddPointActivity extends ActionBarActivity {
                     Dane.buforWin=0;
                     Dane.buforBlad=1;
                     Dane.buforPodwojny=0;
+                    Dane.buforAs=0;
                 }
                 break;
 
-            case R.id.podwojny:
+            case R.id.as:
                 if(sprawdz){
-                    Dane.buforWin=0;
+                    Dane.buforAs=1;
+                    Dane.buforWin=1;
                     Dane.buforBlad=0;
-                    Dane.buforPodwojny=1;
+                    Dane.buforPodwojny=0;
                 }
                 break;
-
         }
     }
 
     public void ClickZatwierdz(View view) {
         if(Dane.ktoryGracz==1){
-                    Dane.serw12=Dane.serw12 + Dane.buforSerw1;
-                    Dane.serw22=Dane.serw22 + Dane.buforSerw2;
-
-                    Dane.winner1=Dane.winner1 + Dane.buforWin;
-                    Dane.blad2=Dane.blad2 + Dane.buforBlad;
-                    Dane.podwojny2=Dane.podwojny2 + Dane.buforPodwojny;
-        }
-
-        if(Dane.ktoryGracz==2){
             Dane.serw11=Dane.serw11 + Dane.buforSerw1;
             Dane.serw21=Dane.serw21 + Dane.buforSerw2;
 
+            Dane.winner1=Dane.winner1 + Dane.buforWin;
+            Dane.blad2=Dane.blad2 + Dane.buforBlad;
+            Dane.asy1=Dane.asy1 + Dane.buforAs;
+        }
+
+        if(Dane.ktoryGracz==2){
+            Dane.serw12=Dane.serw12 + Dane.buforSerw1;
+            Dane.serw22=Dane.serw22 + Dane.buforSerw2;
+
             Dane.winner2=Dane.winner2 + Dane.buforWin;
             Dane.blad1=Dane.blad1 + Dane.buforBlad;
-            Dane.podwojny1=Dane.podwojny1 + Dane.buforPodwojny;
+            Dane.asy2=Dane.asy2 + Dane.buforPodwojny;
         }
         finish();
     }

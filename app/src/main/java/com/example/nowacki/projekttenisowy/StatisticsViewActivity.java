@@ -18,6 +18,7 @@ public class StatisticsViewActivity extends ActionBarActivity {
         setContentView(R.layout.activity_statistics_view);
         WczytajTextView();
         PrzypiszTextView();
+        SprawdzCzyZaawansowany();
     }
 
 
@@ -76,6 +77,20 @@ public class StatisticsViewActivity extends ActionBarActivity {
         tvWinners2.setText(""+Dane.winner2);
         tvNiewymuszone1.setText(""+Dane.blad1);
         tvNiewymuszone2.setText(""+Dane.blad2);
+    }
+    private void SprawdzCzyZaawansowany(){
+        if(Dane.tryb==false){
+            tvSerwis1.setEnabled(false);
+            tvSerwis2.setEnabled(false);
+            tvAsy1.setEnabled(false);
+            tvAsy2.setEnabled(false);
+            tvPodwojne1.setEnabled(false);
+            tvPodwojne2.setEnabled(false);
+            tvWinners1.setEnabled(false);
+            tvWinners2.setEnabled(false);
+            tvNiewymuszone1.setEnabled(false);
+            tvNiewymuszone2.setEnabled(false);
+        }
     }
 
     public void ClickButtonPowrot(View view) {

@@ -8,5 +8,6 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_add_point">AddPointActivity</string>
     <string name="title_activity_statistics_view">StatisticsViewActivity</string>
+    <string name="title_activity_add_point_service">AddPointServiceActivity</string>
 
 </resources>

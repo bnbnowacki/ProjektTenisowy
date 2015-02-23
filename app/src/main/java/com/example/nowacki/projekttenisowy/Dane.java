@@ -7,13 +7,14 @@ public class Dane {
     public static final int[] punkty = {0, 15, 30, 40}; //tablica z punktacją tenisową
     public static final String przew = "Ad";
     public static boolean tryb;
+    public static int serwis=1;
 
     //pola matematyczne
     public static boolean tieBreak = false;
     public static int aktualna1 = 0, aktualna2 =0;
     public static int przewaga1 =0, przewaga2 =0;
     //pola tekstowe
-    public static String textPointLeft, textPointRight, textGemy, textSety="0 - 2";
+    public static String textPointLeft, textPointRight, textGemy="0 - 0", textSety="0 - 0", tGemy, tSety;
 
     //pole do sprawdzania ktory zawodnik otworzyl okno zaawansowane
     public static int ktoryGracz;

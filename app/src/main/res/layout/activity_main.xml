@@ -44,21 +44,37 @@
         android:textSize="60sp"
         android:layout_below="@id/textViewGracz2"
         android:layout_alignLeft="@id/textViewGracz2"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:text="Serwuje"
+        android:id="@+id/textSerwis1"
+        android:textSize="17sp"
+        android:layout_below="@id/pointRight"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Serwuje"
+        android:id="@+id/textSerwis2"
+        android:textSize="17sp"
         android:layout_below="@id/pointRight"
+        android:layout_alignLeft="@id/textViewVS"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textSerwis1"
         android:id="@+id/textViewSety"
-        android:text="Sety:"/>
+        android:text="Sety: 0 - 0"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/pointRight"
+        android:layout_below="@id/textSerwis1"
         android:layout_alignLeft="@id/textViewVS"
         android:id="@+id/textViewGemy"
-        android:text="Gemy:"/>
+        android:text="Gemy: 0 - 0"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -83,5 +99,8 @@
         android:id="@+id/buttonDodajRight"
         android:layout_alignParentBottom="true"
         android:onClick="ClickRight"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>
