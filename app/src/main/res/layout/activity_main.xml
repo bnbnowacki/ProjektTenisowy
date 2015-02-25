@@ -82,6 +82,19 @@
         android:text="Sprawdź statystyki"
         android:layout_below="@id/textViewSety"
         android:onClick="ClickButtonStatystyki"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Zapisz"
+        android:id="@+id/buttonZapisz"
+        android:layout_below="@id/buttonStatystyki"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wczytaj"
+        android:id="@+id/buttonWczytaj"
+        android:layout_below="@id/buttonStatystyki"
+        android:layout_toRightOf="@id/buttonZapisz"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -101,6 +114,17 @@
         android:onClick="ClickRight"/>
     <ImageView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:id="@+id/ball1"
+        android:background="@drawable/tennis_ball"
+        android:layout_below="@id/pointRight"
+        android:layout_toRightOf="@id/textSerwis1"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ball2"
+        android:background="@drawable/tennis_ball"
+        android:layout_below="@id/pointRight"
+        android:layout_toRightOf="@id/textSerwis2"/>
 
 </RelativeLayout>

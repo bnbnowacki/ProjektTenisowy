@@ -52,6 +52,7 @@ public class StartActivity extends ActionBarActivity {
         Dane.nazwa1 = ed1.getText().toString();
         Dane.nazwa2 = ed2.getText().toString();
         LosujSerwis();
+        CzyscDane();
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
@@ -111,5 +112,27 @@ public class StartActivity extends ActionBarActivity {
             Dane.serwis = a;
             drugiKomunikat.show();
         }
+    }
+    private void CzyscDane(){
+        Dane.gemy1=0;
+        Dane.gemy2=0;
+        Dane.sety1=0;
+        Dane.sety2=0;
+        Dane.punkty1=0;
+        Dane.punkty2=0;
+        Dane.winner1=0;
+        Dane.winner2=0;
+        Dane.blad1=0;
+        Dane.blad2=0;
+        Dane.podwojny1=0;
+        Dane.podwojny2=0;
+        Dane.asy1=0;
+        Dane.asy2=0;
+        Dane.serw11=0;
+        Dane.serw12=0;
+        Dane.serw21=0;
+        Dane.serw22=0;
+        Dane.aktualna1=0;
+        Dane.aktualna2=0;
     }
 }

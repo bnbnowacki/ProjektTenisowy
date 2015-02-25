@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 
@@ -16,6 +17,7 @@ public class MainActivity extends ActionBarActivity {
     TextView textPunkt1;
     TextView textPunkt2;
     TextView serw1, serw2;
+    ImageView ball1, ball2;
     Operacja operacja;
 
     @Override
@@ -32,6 +34,8 @@ public class MainActivity extends ActionBarActivity {
         textSety=(TextView)findViewById(R.id.textViewSety);
         serw1=(TextView)findViewById(R.id.textSerwis1);
         serw2=(TextView)findViewById(R.id.textSerwis2);
+        ball1=(ImageView)findViewById(R.id.ball1);
+        ball2=(ImageView)findViewById(R.id.ball2);
         operacja = new Operacja();
         SprawdzSerwis();
     }
@@ -115,11 +119,15 @@ public class MainActivity extends ActionBarActivity {
             case 1:
                 serw1.setEnabled(true);
                 serw2.setEnabled(false);
+                ball1.setVisibility(View.VISIBLE);
+                ball2.setVisibility(View.INVISIBLE);
                 break;
 
             case 2:
                 serw1.setEnabled(false);
                 serw2.setEnabled(true);
+                ball1.setVisibility(View.INVISIBLE);
+                ball2.setVisibility(View.VISIBLE);
                 break;
         }
     }
